@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_details_legislacao_activity.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_card_licitacao.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/xml_backup_rules.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_signup_activity.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/signup_activity.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_roundedbg.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/roundedbg.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_teste.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/teste.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_activity_main.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_marca_fesfsus1.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/marca_fesfsus1.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_list_licitacao_activity.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/list_licitacao_activity.xml"
+    },
+    {
+        "merged": "com.example.fefsus.app-debug-43:/layout_details_legislacao_activity.xml.flat",
+        "source": "com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_icon_search.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/icon_search.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/navigation_nav_graph.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_marca_fesfsus.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/marca_fesfsus.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/ic_launcher_foreground.xml"
+    }
+]
