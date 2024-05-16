@@ -4,44 +4,51 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.fefsus.R;
 import com.example.fefsus.domain.licitacoes.LicitacaoCallback;
-import com.example.fefsus.domain.licitacoes.LicitacoesCallback;
 import com.example.fefsus.domain.licitacoes.LicitacoesModel;
 import com.example.fefsus.domain.licitacoes.LicitacoesService;
 
-import java.util.ArrayList;
-
 public class DetailsLegislacaoActivity  extends AppCompatActivity {
     private LicitacoesService licitacoesService = new LicitacoesService();
-    private TextView textViewDescricao, textViewNumero, textViewDetalhe;
+    private LicitacoesModel licitacoesModel;
+    private TextView textDescricao, textNumero, textDetalhe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_legislacao_activity);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View Viewtoolbar =  inflater.inflate(R.layout.app_bar,null);
+
+        Toolbar toolbar = Viewtoolbar.findViewById(R.id.appbar);
+        setActionBar(toolbar);
         Intent intent = getIntent();
         if(intent != null){
             licitacoesService.getId(intent.getLongExtra("id",0),
                     new LicitacaoCallback(){
-                        @SuppressLint("SetTextI18n")
                         @Override
                         public void onLicitacaoReceived(LicitacoesModel licitacoes) {
-                            Log.d("detalhesDetails",licitacoes.getDetalhe());
-
-                            textViewDetalhe = findViewById(R.id.textDel);
-                            textViewDescricao = findViewById(R.id.textViewDetailsDescricao);
-                            textViewNumero = findViewById(R.id.textViewDetalhesNumero);
-
-                            textViewDetalhe.setText("Soluta laboriosam reiciendis sunt ratione. Voluptates veniam autem dolore modi commodi ad ut iste. Voluptate vitae iste magni libero atque. Eos repudiandae ullam nam vitae eligendi. Fugiat dolore alias veritatis temporibus maiores nemo facere et omnis. Expedita commodi laudantium natus.\nArchitecto illum voluptate excepturi nisi asperiores dolor soluta voluptate quas. Quod asperiores neque aspernatur enim molestias laborum natus occaecati. Iure nemo consequuntur sint sed. Fuga aliquid iste nemo ratione. Quibusdam ullam quaerat hic. Ducimus occaecati mollitia assumenda.\nPossimus illum magni a aperiam officiis perferendis tenetur nesciunt. Saepe perferendis quas voluptatem repellat nisi necessitatibus porro sequi est. Distinctio quia esse dolores excepturi doloremque ad.");
-                            textViewDescricao.setText(licitacoes.getDescricao());
-                            textViewNumero.setText(licitacoes.getNumero());
-
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    textDetalhe = findViewById(R.id.textDetalhe);
+                                    textDetalhe.setText(licitacoes.getDetalhe());
+                                    textNumero = findViewById(R.id.textNumero);
+                                    textNumero.setText(licitacoes.getNumero());
+                                    textDescricao = findViewById(R.id.textDescricao);
+                                    textDescricao.setText(licitacoes.getDescricao());
+                                }
+                            });
                         }
 
                         @Override
@@ -50,5 +57,12 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
                         }
                     });
         }
+        ImageButton imageButtonBack = findViewById(R.id.imageButtonBack);
+        imageButtonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

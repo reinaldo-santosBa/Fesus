@@ -1,19 +1,15 @@
 [
     {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/app_bar.xml",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/app_bar.xml"
+    },
+    {
         "merged": "com.example.fefsus.app-mergeDebugResources-42:/layout/details_legislacao_activity.xml",
         "source": "com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/card_licitacao.xml",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
-    },
-    {
-        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/signup_activity.xml",
-        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/signup_activity.xml"
-    },
-    {
-        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/teste.xml",
-        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/teste.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/activity_main.xml",

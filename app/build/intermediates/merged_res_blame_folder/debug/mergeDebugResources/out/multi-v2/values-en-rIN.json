@@ -4,24 +4,7 @@
             "outputFile": "com.example.fefsus.app-mergeDebugResources-41:/values-en-rIN/values-en-rIN.xml",
             "map": [
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/8a46fecfc6f7ce560d6de835167bfe7b/transformed/core-1.9.0/res/values-en-rIN/values-en-rIN.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "32",
-                        "startColumns": "4",
-                        "startOffsets": "3068",
-                        "endColumns": "100",
-                        "endOffsets": "3164"
-                    }
-                },
-                {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/0cdcf8c2635d211dd0846a550a30da8d/transformed/navigation-ui-2.7.7/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/b157181e98b8f63cc1bbedff037e40e3/transformed/navigation-ui-2.7.7/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/38e12d4733ed0b7c770f0b0cc90bd8a4/transformed/appcompat-1.6.1/res/values-en-rIN/values-en-rIN.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/ee528da307252a4c6fff5ed60412dc7a/transformed/core-1.9.0/res/values-en-rIN/values-en-rIN.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "32",
+                        "startColumns": "4",
+                        "startOffsets": "3068",
+                        "endColumns": "100",
+                        "endOffsets": "3164"
+                    }
+                },
+                {
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/43ab1ac4854a556b9c0a73c4526ca0ef/transformed/appcompat-1.6.1/res/values-en-rIN/values-en-rIN.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

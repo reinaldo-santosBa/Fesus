@@ -4,24 +4,24 @@
             "outputFile": "com.example.fefsus.app-mergeDebugResources-41:/values-lv/values-lv.xml",
             "map": [
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/8a46fecfc6f7ce560d6de835167bfe7b/transformed/core-1.9.0/res/values-lv/values-lv.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/b157181e98b8f63cc1bbedff037e40e3/transformed/navigation-ui-2.7.7/res/values-lv/values-lv.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,169",
+                        "endColumns": "113,122",
+                        "endOffsets": "164,287"
                     },
                     "to": {
-                        "startLines": "105",
-                        "startColumns": "4",
-                        "startOffsets": "9170",
-                        "endColumns": "100",
-                        "endOffsets": "9266"
+                        "startLines": "101,102",
+                        "startColumns": "4,4",
+                        "startOffsets": "8773,8887",
+                        "endColumns": "113,122",
+                        "endOffsets": "8882,9005"
                     }
                 },
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/c8dc47fbe8350505fef343d68865a0d3/transformed/material-1.11.0/res/values-lv/values-lv.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/7c4b5e8ff575437fae53dee2fef930d9/transformed/material-1.11.0/res/values-lv/values-lv.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -40,24 +40,7 @@
                     }
                 },
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/0cdcf8c2635d211dd0846a550a30da8d/transformed/navigation-ui-2.7.7/res/values-lv/values-lv.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,169",
-                        "endColumns": "113,122",
-                        "endOffsets": "164,287"
-                    },
-                    "to": {
-                        "startLines": "101,102",
-                        "startColumns": "4,4",
-                        "startOffsets": "8773,8887",
-                        "endColumns": "113,122",
-                        "endOffsets": "8882,9005"
-                    }
-                },
-                {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/38e12d4733ed0b7c770f0b0cc90bd8a4/transformed/appcompat-1.6.1/res/values-lv/values-lv.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/43ab1ac4854a556b9c0a73c4526ca0ef/transformed/appcompat-1.6.1/res/values-lv/values-lv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -71,6 +54,23 @@
                         "startOffsets": "374,494,604,713,799,903,1025,1107,1187,1297,1405,1511,1620,1731,1834,1946,2053,2158,2258,2343,2452,2563,2662,2773,2880,2985,3159,9087",
                         "endColumns": "119,109,108,85,103,121,81,79,109,107,105,108,110,102,111,106,104,99,84,108,110,98,110,106,104,173,98,82",
                         "endOffsets": "489,599,708,794,898,1020,1102,1182,1292,1400,1506,1615,1726,1829,1941,2048,2153,2253,2338,2447,2558,2657,2768,2875,2980,3154,3253,9165"
+                    }
+                },
+                {
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/ee528da307252a4c6fff5ed60412dc7a/transformed/core-1.9.0/res/values-lv/values-lv.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "105",
+                        "startColumns": "4",
+                        "startOffsets": "9170",
+                        "endColumns": "100",
+                        "endOffsets": "9266"
                     }
                 }
             ]

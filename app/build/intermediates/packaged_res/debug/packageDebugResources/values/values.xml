@@ -13,6 +13,8 @@
     <string name="action_settings">Settings</string>
     <string name="app_name">Fefsus</string>
     <string name="apresentacao">Reinaldo Olá mundo</string>
+    <string name="backbtn">backBtn</string>
+    <string name="editbtn">editBtn</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="hintUsuario">Usuário</string>
     <string name="hint_search">Digite sua pesquisa...</string>
@@ -56,6 +58,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="ricardo">Ricardo oi</string>
+    <string name="savebtn">saveBtn</string>
     <string name="search">Search</string>
     <string name="second_fragment_label">Second Fragment</string>
     <style name="Base.Theme.Fefsus" parent="Theme.Material3.DayNight.NoActionBar">

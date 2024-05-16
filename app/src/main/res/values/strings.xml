@@ -51,4 +51,7 @@
     <string name="apresentacao">Reinaldo Olá mundo</string>
     <string name="ricardo">Ricardo oi</string>
     <string name="marcos">Marcos oi</string>
+    <string name="savebtn">saveBtn</string>
+    <string name="editbtn">editBtn</string>
+    <string name="backbtn">backBtn</string>
 </resources>

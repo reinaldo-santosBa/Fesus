@@ -4,6 +4,7 @@ package com.example.fefsus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -20,13 +21,22 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextView textDel;
+  public final ImageButton imageButtonBack;
 
   @NonNull
-  public final TextView textViewDetailsDescricao;
+  public final ImageButton imageButtonEdit;
 
   @NonNull
-  public final TextView textViewDetalhesNumero;
+  public final TextView textDescricao;
+
+  @NonNull
+  public final TextView textDetalhe;
+
+  @NonNull
+  public final TextView textNumero;
+
+  @NonNull
+  public final TextView textView2;
 
   @NonNull
   public final View view2;
@@ -35,12 +45,16 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
   public final View view3;
 
   private DetailsLegislacaoActivityBinding(@NonNull LinearLayout rootView,
-      @NonNull TextView textDel, @NonNull TextView textViewDetailsDescricao,
-      @NonNull TextView textViewDetalhesNumero, @NonNull View view2, @NonNull View view3) {
+      @NonNull ImageButton imageButtonBack, @NonNull ImageButton imageButtonEdit,
+      @NonNull TextView textDescricao, @NonNull TextView textDetalhe, @NonNull TextView textNumero,
+      @NonNull TextView textView2, @NonNull View view2, @NonNull View view3) {
     this.rootView = rootView;
-    this.textDel = textDel;
-    this.textViewDetailsDescricao = textViewDetailsDescricao;
-    this.textViewDetalhesNumero = textViewDetalhesNumero;
+    this.imageButtonBack = imageButtonBack;
+    this.imageButtonEdit = imageButtonEdit;
+    this.textDescricao = textDescricao;
+    this.textDetalhe = textDetalhe;
+    this.textNumero = textNumero;
+    this.textView2 = textView2;
     this.view2 = view2;
     this.view3 = view3;
   }
@@ -72,21 +86,39 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.textDel;
-      TextView textDel = ViewBindings.findChildViewById(rootView, id);
-      if (textDel == null) {
+      id = R.id.imageButtonBack;
+      ImageButton imageButtonBack = ViewBindings.findChildViewById(rootView, id);
+      if (imageButtonBack == null) {
         break missingId;
       }
 
-      id = R.id.textViewDetailsDescricao;
-      TextView textViewDetailsDescricao = ViewBindings.findChildViewById(rootView, id);
-      if (textViewDetailsDescricao == null) {
+      id = R.id.imageButtonEdit;
+      ImageButton imageButtonEdit = ViewBindings.findChildViewById(rootView, id);
+      if (imageButtonEdit == null) {
         break missingId;
       }
 
-      id = R.id.textViewDetalhesNumero;
-      TextView textViewDetalhesNumero = ViewBindings.findChildViewById(rootView, id);
-      if (textViewDetalhesNumero == null) {
+      id = R.id.textDescricao;
+      TextView textDescricao = ViewBindings.findChildViewById(rootView, id);
+      if (textDescricao == null) {
+        break missingId;
+      }
+
+      id = R.id.textDetalhe;
+      TextView textDetalhe = ViewBindings.findChildViewById(rootView, id);
+      if (textDetalhe == null) {
+        break missingId;
+      }
+
+      id = R.id.textNumero;
+      TextView textNumero = ViewBindings.findChildViewById(rootView, id);
+      if (textNumero == null) {
+        break missingId;
+      }
+
+      id = R.id.textView2;
+      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
+      if (textView2 == null) {
         break missingId;
       }
 
@@ -102,8 +134,8 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DetailsLegislacaoActivityBinding((LinearLayout) rootView, textDel,
-          textViewDetailsDescricao, textViewDetalhesNumero, view2, view3);
+      return new DetailsLegislacaoActivityBinding((LinearLayout) rootView, imageButtonBack,
+          imageButtonEdit, textDescricao, textDetalhe, textNumero, textView2, view2, view3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

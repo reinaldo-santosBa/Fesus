@@ -4,7 +4,7 @@
             "outputFile": "com.example.fefsus.app-mergeDebugResources-41:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/home/reinaldo/.gradle/caches/transforms-3/c8dc47fbe8350505fef343d68865a0d3/transformed/material-1.11.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/home/reinaldo/.gradle/caches/transforms-3/7c4b5e8ff575437fae53dee2fef930d9/transformed/material-1.11.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

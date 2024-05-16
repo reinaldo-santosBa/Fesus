@@ -8,7 +8,8 @@ public class LicitacoesModel {
 
     public LicitacoesModel() {
     }
-
+    public LicitacoesModel(LicitacoesModel licitacoesModel) {
+    }
     public Long getId() {
         return id;
     }
