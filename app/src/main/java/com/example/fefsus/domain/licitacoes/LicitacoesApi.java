@@ -23,7 +23,7 @@ public class LicitacoesApi {
 
     public void getAsync(ApiResponseListener apiResponseListener) {
         executor.execute(() -> {
-            String url = "https://662aca0ade35f91de156690b.mockapi.io/legislacao";
+            String url = "http://10.0.2.2:8080/legislacao";
             Request request = new Request.Builder()
                     .url(url)
                     .build();
@@ -43,7 +43,7 @@ public class LicitacoesApi {
     }
     public void getIdAsync(Long id,ApiResponseListener apiResponseListener) {
         executor.execute(() -> {
-            String url = "https://662aca0ade35f91de156690b.mockapi.io/legislacao/" + id;
+            String url = "http://10.0.2.2:8080/legislacao/" + id;
             Request request = new Request.Builder()
                     .url(url)
                     .build();

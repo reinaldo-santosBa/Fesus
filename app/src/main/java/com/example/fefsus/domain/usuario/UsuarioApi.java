@@ -3,12 +3,13 @@ package com.example.fefsus.domain.usuario;
 import android.util.Log;
 
 import com.example.fefsus.utils.ApiResponseListener;
+import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import okhttp3.FormBody;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -20,31 +21,37 @@ public class UsuarioApi {
     private final OkHttpClient client = new OkHttpClient();
 
     private final Executor executor = Executors.newSingleThreadExecutor();
+    private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+    private final Gson gson = new Gson();
 
     public void loginApi(String email, String senha, ApiResponseListener apiResponseListener){
-        String url = "http://localhost:8080/usuario/login";
-        Log.d("emailLogin",email);
-        RequestBody formBody = new FormBody.Builder()
-                .add("email", email)
-                .add("senha", senha)
-                .build();
+        String url = "http://192.168.100.50:8080/usuario/login";
+        UsuarioDto credentials = new UsuarioDto(email, senha);
+        String json = gson.toJson(credentials);
+        RequestBody body = RequestBody.Companion.create(json, JSON);
+
         Request request = new Request.Builder()
                 .url(url)
-                .post(formBody)
+                .post(body)
                 .build();
-        try {
-            Response response = client.newCall(request).execute();
-            if (response.isSuccessful()) {
-
-                assert response.body() != null;
-                String responseBody = response.body().string();
-                apiResponseListener.onResponse(responseBody);
-            } else {
-                apiResponseListener.onError(new IOException("Unsuccessful response: " + response));
+        executor.execute(() -> {
+            try (Response response = client.newCall(request).execute()) {
+                Log.d("status", String.valueOf(response));
+                if (response.isSuccessful() && response.body() != null) {
+                    String responseBody = response.body().string();
+                    apiResponseListener.onResponse(responseBody);
+                    Log.d("LoginSuccess", responseBody);
+                } else {
+                    String errorMessage = "Unsuccessful response";
+                    if (response.body() != null) {
+                        errorMessage += ": " + response.body().string(); // To handle error messages from server.
+                    }
+                    apiResponseListener.onError(new IOException(errorMessage));
+                }
+            } catch (IOException e) {
+                apiResponseListener.onError(e);
             }
-        }catch ( IOException e){
-            apiResponseListener.onError(e);
-        }
+            // Important to avoid leaking resources
+        });
     }
-
 }

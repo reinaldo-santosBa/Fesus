@@ -32,7 +32,8 @@ public class UsuarioService {
 
             @Override
             public void onError(Throwable throwable) {
-                    usuarioLoginCallback.onError(throwable);
+                Log.d("onErrorrtwetwe",throwable.toString());
+                usuarioLoginCallback.onError(throwable);
             }
         });
     }

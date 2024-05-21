@@ -52,15 +52,24 @@ public class MainActivity extends AppCompatActivity {
                 String editTextEmailValue = String.valueOf(editTextEmail.getText());
                 String editTextSenhaValue = String.valueOf(editTextSenha.getText());
                 usuarioService = new UsuarioService();
+
+                if (editTextEmailValue.isEmpty() || editTextSenhaValue.isEmpty()) {
+                    Log.d("LoginError", "Email or Password is empty");
+                    return;
+                }
                 usuarioService.login(editTextEmailValue, editTextSenhaValue, new UsuarioLoginCallback() {
                     @Override
                     public void onUsuarioReceived(UsuarioModel usuario) {
-                        Intent ListLicitacoesIntent = new Intent(MainActivity.this, ListLicitacoesActivity.class);
-                        startActivity(ListLicitacoesIntent);
-                        SharedPreferences.Editor editor = sharedPref.edit();
-                        editor.putBoolean("logged",true);
-                        editor.putString("token",usuario.getToken());
-                        editor.apply();
+                        runOnUiThread(() -> {
+                            Log.d("usuario.getEmail()",usuario.getEmail());
+                            Intent ListLicitacoesIntent = new Intent(MainActivity.this, ListLicitacoesActivity.class);
+                            startActivity(ListLicitacoesIntent);
+                            SharedPreferences.Editor editor = sharedPref.edit();
+                            editor.putBoolean("logged", true);
+                            editor.putString("token", usuario.getToken());
+                            editor.apply();
+                        });
+
                     }
 
                     @Override
