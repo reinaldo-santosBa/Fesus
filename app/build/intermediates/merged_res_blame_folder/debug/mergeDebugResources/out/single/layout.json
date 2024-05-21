@@ -4,16 +4,16 @@
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/app_bar.xml"
     },
     {
-        "merged": "com.example.fefsus.app-mergeDebugResources-42:/layout/details_legislacao_activity.xml",
-        "source": "com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
-    },
-    {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/card_licitacao.xml",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/activity_main.xml",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.fefsus.app-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.example.fefsus.app-main-45:/layout/activity_main.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-mergeDebugResources-42:/layout/details_legislacao_activity.xml",

@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -13,13 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.fefsus.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
 
 public final class ListLicitacaoActivityBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final ConstraintLayout rootView;
+
+  @NonNull
+  public final FloatingActionButton btnAdd;
 
   @NonNull
   public final EditText inputSearch;
@@ -28,20 +31,26 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
+  public final ConstraintLayout linearLayout2;
+
+  @NonNull
   public final RecyclerView recyclerViewLicitacoes;
 
-  private ListLicitacaoActivityBinding(@NonNull LinearLayout rootView,
-      @NonNull EditText inputSearch, @NonNull ConstraintLayout linearLayout,
+  private ListLicitacaoActivityBinding(@NonNull ConstraintLayout rootView,
+      @NonNull FloatingActionButton btnAdd, @NonNull EditText inputSearch,
+      @NonNull ConstraintLayout linearLayout, @NonNull ConstraintLayout linearLayout2,
       @NonNull RecyclerView recyclerViewLicitacoes) {
     this.rootView = rootView;
+    this.btnAdd = btnAdd;
     this.inputSearch = inputSearch;
     this.linearLayout = linearLayout;
+    this.linearLayout2 = linearLayout2;
     this.recyclerViewLicitacoes = recyclerViewLicitacoes;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -66,6 +75,12 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnAdd;
+      FloatingActionButton btnAdd = ViewBindings.findChildViewById(rootView, id);
+      if (btnAdd == null) {
+        break missingId;
+      }
+
       id = R.id.inputSearch;
       EditText inputSearch = ViewBindings.findChildViewById(rootView, id);
       if (inputSearch == null) {
@@ -78,14 +93,16 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      ConstraintLayout linearLayout2 = (ConstraintLayout) rootView;
+
       id = R.id.recyclerViewLicitacoes;
       RecyclerView recyclerViewLicitacoes = ViewBindings.findChildViewById(rootView, id);
       if (recyclerViewLicitacoes == null) {
         break missingId;
       }
 
-      return new ListLicitacaoActivityBinding((LinearLayout) rootView, inputSearch, linearLayout,
-          recyclerViewLicitacoes);
+      return new ListLicitacaoActivityBinding((ConstraintLayout) rootView, btnAdd, inputSearch,
+          linearLayout, linearLayout2, recyclerViewLicitacoes);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

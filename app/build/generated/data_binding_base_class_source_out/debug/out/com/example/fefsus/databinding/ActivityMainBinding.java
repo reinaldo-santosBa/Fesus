@@ -13,6 +13,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.fefsus.R;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -26,10 +27,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView btnConvidado;
 
   @NonNull
-  public final Button button;
+  public final Button buttonLogin;
 
   @NonNull
   public final ImageView imageView;
+
+  @NonNull
+  public final TextInputEditText textInputEditTextEmail;
+
+  @NonNull
+  public final TextInputEditText textInputEditTextSenha;
 
   @NonNull
   public final TextInputLayout textInputSenha;
@@ -38,12 +45,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextInputLayout textInputUsuario;
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView btnConvidado,
-      @NonNull Button button, @NonNull ImageView imageView, @NonNull TextInputLayout textInputSenha,
+      @NonNull Button buttonLogin, @NonNull ImageView imageView,
+      @NonNull TextInputEditText textInputEditTextEmail,
+      @NonNull TextInputEditText textInputEditTextSenha, @NonNull TextInputLayout textInputSenha,
       @NonNull TextInputLayout textInputUsuario) {
     this.rootView = rootView;
     this.btnConvidado = btnConvidado;
-    this.button = button;
+    this.buttonLogin = buttonLogin;
     this.imageView = imageView;
+    this.textInputEditTextEmail = textInputEditTextEmail;
+    this.textInputEditTextSenha = textInputEditTextSenha;
     this.textInputSenha = textInputSenha;
     this.textInputUsuario = textInputUsuario;
   }
@@ -81,15 +92,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.button;
-      Button button = ViewBindings.findChildViewById(rootView, id);
-      if (button == null) {
+      id = R.id.buttonLogin;
+      Button buttonLogin = ViewBindings.findChildViewById(rootView, id);
+      if (buttonLogin == null) {
         break missingId;
       }
 
       id = R.id.imageView;
       ImageView imageView = ViewBindings.findChildViewById(rootView, id);
       if (imageView == null) {
+        break missingId;
+      }
+
+      id = R.id.textInputEditTextEmail;
+      TextInputEditText textInputEditTextEmail = ViewBindings.findChildViewById(rootView, id);
+      if (textInputEditTextEmail == null) {
+        break missingId;
+      }
+
+      id = R.id.textInputEditTextSenha;
+      TextInputEditText textInputEditTextSenha = ViewBindings.findChildViewById(rootView, id);
+      if (textInputEditTextSenha == null) {
         break missingId;
       }
 
@@ -105,8 +128,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnConvidado, button, imageView,
-          textInputSenha, textInputUsuario);
+      return new ActivityMainBinding((ConstraintLayout) rootView, btnConvidado, buttonLogin,
+          imageView, textInputEditTextEmail, textInputEditTextSenha, textInputSenha,
+          textInputUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

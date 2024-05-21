@@ -3017,6 +3017,8 @@ int drawable abc_textfield_search_activated_mtrl_alpha 0x7f070074
 int drawable abc_textfield_search_default_mtrl_alpha 0x7f070075
 int drawable abc_textfield_search_material 0x7f070076
 int drawable abc_vector_test 0x7f070077
+int drawable add 0x7f0700e6
+int drawable added 0x7f0700e7
 int drawable avd_hide_password 0x7f070078
 int drawable avd_show_password 0x7f070079
 int drawable btn_checkbox_checked_mtrl 0x7f07007a
@@ -3231,8 +3233,9 @@ int id bounce 0x7f080064
 int id bounceBoth 0x7f080065
 int id bounceEnd 0x7f080066
 int id bounceStart 0x7f080067
+int id btnAdd 0x7f080217
 int id btnConvidado 0x7f080068
-int id button 0x7f080069
+int id buttonLogin 0x7f080219
 int id buttonPanel 0x7f08006a
 int id cache_measures 0x7f08006b
 int id callMeasure 0x7f08006c
@@ -3379,6 +3382,8 @@ int id line1 0x7f0800f8
 int id line3 0x7f0800f9
 int id linear 0x7f0800fa
 int id linearLayout 0x7f0800fb
+int id linearLayout2 0x7f080216
+int id linearLayout3 0x7f080218
 int id listMode 0x7f0800fc
 int id list_item 0x7f0800fd
 int id locale 0x7f0800fe
@@ -3596,6 +3601,8 @@ int id text2 0x7f0801d1
 int id textDescricao 0x7f0801d2
 int id textDetalhe 0x7f0801d3
 int id textEnd 0x7f0801d4
+int id textInputEditTextEmail 0x7f08021a
+int id textInputEditTextSenha 0x7f08021b
 int id textInputSenha 0x7f0801d5
 int id textInputUsuario 0x7f0801d6
 int id textNumero 0x7f0801d7
@@ -3889,6 +3896,7 @@ int string abc_shareactionprovider_share_with 0x7f10001a
 int string abc_shareactionprovider_share_with_application 0x7f10001b
 int string abc_toolbar_collapse_description 0x7f10001c
 int string action_settings 0x7f10001d
+int string addbutton 0x7f1000b4
 int string androidx_startup 0x7f10001e
 int string app_name 0x7f10001f
 int string appbar_scrolling_view_behavior 0x7f100020
@@ -3917,7 +3925,6 @@ int string hintUsuario 0x7f100036
 int string hint_search 0x7f100037
 int string icon_content_description 0x7f100038
 int string item_view_role_description 0x7f100039
-int string lorem_ipsum 0x7f10003a
 int string m3_exceed_max_badge_text_suffix 0x7f10003b
 int string m3_ref_typeface_brand_medium 0x7f10003c
 int string m3_ref_typeface_brand_regular 0x7f10003d
@@ -4027,6 +4034,7 @@ int string path_password_eye 0x7f1000a4
 int string path_password_eye_mask_strike_through 0x7f1000a5
 int string path_password_eye_mask_visible 0x7f1000a6
 int string path_password_strike_through 0x7f1000a7
+int string preference_file_key 0x7f1000b5
 int string previous 0x7f1000a8
 int string ricardo 0x7f1000a9
 int string savebtn 0x7f1000aa

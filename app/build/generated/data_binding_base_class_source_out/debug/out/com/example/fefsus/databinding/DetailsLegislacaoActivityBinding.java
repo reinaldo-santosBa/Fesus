@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.fefsus.R;
@@ -25,6 +26,9 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton imageButtonEdit;
+
+  @NonNull
+  public final ConstraintLayout linearLayout3;
 
   @NonNull
   public final TextView textDescricao;
@@ -46,11 +50,13 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
 
   private DetailsLegislacaoActivityBinding(@NonNull LinearLayout rootView,
       @NonNull ImageButton imageButtonBack, @NonNull ImageButton imageButtonEdit,
-      @NonNull TextView textDescricao, @NonNull TextView textDetalhe, @NonNull TextView textNumero,
-      @NonNull TextView textView2, @NonNull View view2, @NonNull View view3) {
+      @NonNull ConstraintLayout linearLayout3, @NonNull TextView textDescricao,
+      @NonNull TextView textDetalhe, @NonNull TextView textNumero, @NonNull TextView textView2,
+      @NonNull View view2, @NonNull View view3) {
     this.rootView = rootView;
     this.imageButtonBack = imageButtonBack;
     this.imageButtonEdit = imageButtonEdit;
+    this.linearLayout3 = linearLayout3;
     this.textDescricao = textDescricao;
     this.textDetalhe = textDetalhe;
     this.textNumero = textNumero;
@@ -98,6 +104,12 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.linearLayout3;
+      ConstraintLayout linearLayout3 = ViewBindings.findChildViewById(rootView, id);
+      if (linearLayout3 == null) {
+        break missingId;
+      }
+
       id = R.id.textDescricao;
       TextView textDescricao = ViewBindings.findChildViewById(rootView, id);
       if (textDescricao == null) {
@@ -135,7 +147,8 @@ public final class DetailsLegislacaoActivityBinding implements ViewBinding {
       }
 
       return new DetailsLegislacaoActivityBinding((LinearLayout) rootView, imageButtonBack,
-          imageButtonEdit, textDescricao, textDetalhe, textNumero, textView2, view2, view3);
+          imageButtonEdit, linearLayout3, textDescricao, textDetalhe, textNumero, textView2, view2,
+          view3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

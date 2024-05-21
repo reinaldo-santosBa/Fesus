@@ -8,6 +8,8 @@ color primaryGreen
 color white
 dimen fab_margin
 dimen padding_main
+drawable add
+drawable added
 drawable edit
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -22,8 +24,9 @@ id SecondFragment
 id action_FirstFragment_to_SecondFragment
 id action_SecondFragment_to_FirstFragment
 id appbar
+id btnAdd
 id btnConvidado
-id button
+id buttonLogin
 id card
 id imageButton3
 id imageButton4
@@ -32,10 +35,14 @@ id imageButtonEdit
 id imageView
 id inputSearch
 id linearLayout
+id linearLayout2
+id linearLayout3
 id nav_graph
 id recyclerViewLicitacoes
 id textDescricao
 id textDetalhe
+id textInputEditTextEmail
+id textInputEditTextSenha
 id textInputSenha
 id textInputUsuario
 id textNumero
@@ -57,6 +64,7 @@ navigation nav_graph
 string ButtonOnlyTextLogin
 string TextLoginPrevBtn
 string action_settings
+string addbutton
 string app_name
 string apresentacao
 string backbtn
@@ -64,9 +72,9 @@ string editbtn
 string first_fragment_label
 string hintUsuario
 string hint_search
-string lorem_ipsum
 string marcos
 string next
+string preference_file_key
 string previous
 string ricardo
 string savebtn

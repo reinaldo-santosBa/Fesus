@@ -1,11 +1,14 @@
 package com.example.fefsus.pages.listLicitacoes;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +20,7 @@ import com.example.fefsus.domain.licitacoes.LicitacoesAdapter;
 import com.example.fefsus.domain.licitacoes.LicitacoesCallback;
 import com.example.fefsus.domain.licitacoes.LicitacoesModel;
 import com.example.fefsus.domain.licitacoes.LicitacoesService;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -35,7 +39,19 @@ public class ListLicitacoesActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerViewLicitacoes.setLayoutManager(layoutManager);
         recyclerViewLicitacoes.setHasFixedSize(true);
+        Context context = getApplicationContext();
 
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.preference_file_key),
+                Context.MODE_PRIVATE
+        );
+        boolean logged = sharedPref.getBoolean("logged",false);
+        FloatingActionButton floatingActionButton = findViewById(R.id.btnAdd);
+
+        ViewGroup parent = (ViewGroup) floatingActionButton.getParent();
+        if(!logged){
+            parent.removeView(floatingActionButton);
+        }
         licitacoesService.get(new LicitacoesCallback() {
             @Override
             public void onLicitacoesReceived(ArrayList<LicitacoesModel> licitacoes) {
@@ -63,6 +79,7 @@ public class ListLicitacoesActivity extends AppCompatActivity {
                             @Override
                             public void afterTextChanged(Editable s) {}
                         });
+
                     }
                 });
             }

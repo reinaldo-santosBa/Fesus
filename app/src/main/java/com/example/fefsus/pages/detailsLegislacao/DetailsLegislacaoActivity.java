@@ -1,15 +1,14 @@
 package com.example.fefsus.pages.detailsLegislacao;
 
-import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,13 +25,19 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_legislacao_activity);
-        LayoutInflater inflater = getLayoutInflater();
-
-        View Viewtoolbar =  inflater.inflate(R.layout.app_bar,null);
-
-        Toolbar toolbar = Viewtoolbar.findViewById(R.id.appbar);
-        setActionBar(toolbar);
         Intent intent = getIntent();
+        Context context = getApplicationContext();
+        SharedPreferences sharedPref = context.getSharedPreferences(
+                getString(R.string.preference_file_key),
+                Context.MODE_PRIVATE
+        );
+        boolean logged = sharedPref.getBoolean("logged",false);
+        ImageButton imageButtonEdit = findViewById(R.id.imageButtonEdit);
+
+        ViewGroup parent = (ViewGroup) imageButtonEdit.getParent();
+        if(!logged){
+            parent.removeView(imageButtonEdit);
+        }
         if(intent != null){
             licitacoesService.getId(intent.getLongExtra("id",0),
                     new LicitacaoCallback(){
@@ -47,6 +52,7 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
                                     textNumero.setText(licitacoes.getNumero());
                                     textDescricao = findViewById(R.id.textDescricao);
                                     textDescricao.setText(licitacoes.getDescricao());
+
                                 }
                             });
                         }
@@ -62,6 +68,13 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        imageButtonEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                
             }
         });
     }

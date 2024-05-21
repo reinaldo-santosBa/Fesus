@@ -3018,6 +3018,8 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable add
+drawable added
 drawable avd_hide_password
 drawable avd_show_password
 drawable btn_checkbox_checked_mtrl
@@ -3232,8 +3234,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnAdd
 id btnConvidado
-id button
+id buttonLogin
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3380,6 +3383,8 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
+id linearLayout3
 id listMode
 id list_item
 id locale
@@ -3597,6 +3602,8 @@ id text2
 id textDescricao
 id textDetalhe
 id textEnd
+id textInputEditTextEmail
+id textInputEditTextSenha
 id textInputSenha
 id textInputUsuario
 id textNumero
@@ -3890,6 +3897,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string addbutton
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3918,7 +3926,6 @@ string hintUsuario
 string hint_search
 string icon_content_description
 string item_view_role_description
-string lorem_ipsum
 string m3_exceed_max_badge_text_suffix
 string m3_ref_typeface_brand_medium
 string m3_ref_typeface_brand_regular
@@ -4028,6 +4035,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string preference_file_key
 string previous
 string ricardo
 string savebtn
