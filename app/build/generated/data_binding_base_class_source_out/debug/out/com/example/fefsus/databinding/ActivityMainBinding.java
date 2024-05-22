@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,6 +34,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final ImageView imageView;
 
   @NonNull
+  public final ProgressBar progressBarLogin;
+
+  @NonNull
   public final TextInputEditText textInputEditTextEmail;
 
   @NonNull
@@ -46,13 +50,14 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull TextView btnConvidado,
       @NonNull Button buttonLogin, @NonNull ImageView imageView,
-      @NonNull TextInputEditText textInputEditTextEmail,
+      @NonNull ProgressBar progressBarLogin, @NonNull TextInputEditText textInputEditTextEmail,
       @NonNull TextInputEditText textInputEditTextSenha, @NonNull TextInputLayout textInputSenha,
       @NonNull TextInputLayout textInputUsuario) {
     this.rootView = rootView;
     this.btnConvidado = btnConvidado;
     this.buttonLogin = buttonLogin;
     this.imageView = imageView;
+    this.progressBarLogin = progressBarLogin;
     this.textInputEditTextEmail = textInputEditTextEmail;
     this.textInputEditTextSenha = textInputEditTextSenha;
     this.textInputSenha = textInputSenha;
@@ -104,6 +109,12 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.progressBarLogin;
+      ProgressBar progressBarLogin = ViewBindings.findChildViewById(rootView, id);
+      if (progressBarLogin == null) {
+        break missingId;
+      }
+
       id = R.id.textInputEditTextEmail;
       TextInputEditText textInputEditTextEmail = ViewBindings.findChildViewById(rootView, id);
       if (textInputEditTextEmail == null) {
@@ -129,8 +140,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((ConstraintLayout) rootView, btnConvidado, buttonLogin,
-          imageView, textInputEditTextEmail, textInputEditTextSenha, textInputSenha,
-          textInputUsuario);
+          imageView, progressBarLogin, textInputEditTextEmail, textInputEditTextSenha,
+          textInputSenha, textInputUsuario);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

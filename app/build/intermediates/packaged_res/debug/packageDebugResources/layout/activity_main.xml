@@ -59,28 +59,40 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="30dp"
-                android:hint="Senha"
+                android:hint="@string/senha"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/buttonLogin"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoSizeTextType="none"
-            android:backgroundTint="@color/primaryGreen"
-            android:text="ACESSAR"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp" />
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
 
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoSizeTextType="none"
+                android:backgroundTint="@color/primaryGreen"
+                android:text="@string/acessar"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp" >
+
+            </Button>
+            <ProgressBar
+                android:id="@+id/progressBarLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+        </FrameLayout>
         <TextView
             android:id="@+id/btnConvidado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Entrar como convidado"
+            android:text="@string/visualizar_as_legisla_es"
             android:textAllCaps="true"
             android:textColor="@color/bluePrimary"
             android:textSize="16sp"

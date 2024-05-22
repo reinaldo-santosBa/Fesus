@@ -38,6 +38,7 @@ id linearLayout
 id linearLayout2
 id linearLayout3
 id nav_graph
+id progressBarLogin
 id recyclerViewLicitacoes
 id textDescricao
 id textDetalhe
@@ -63,6 +64,7 @@ mipmap ic_launcher_round
 navigation nav_graph
 string ButtonOnlyTextLogin
 string TextLoginPrevBtn
+string acessar
 string action_settings
 string addbutton
 string app_name
@@ -80,6 +82,8 @@ string ricardo
 string savebtn
 string search
 string second_fragment_label
+string senha
+string visualizar_as_legisla_es
 style Base.Theme.Fefsus
 style Theme.Fefsus
 xml backup_rules

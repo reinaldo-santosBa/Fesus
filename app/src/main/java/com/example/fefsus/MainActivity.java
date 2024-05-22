@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -44,9 +46,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button buttonLogin = findViewById(R.id.buttonLogin);
+        ProgressBar progressBarLogin = findViewById(R.id.progressBarLogin);
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBarLogin.setVisibility(View.VISIBLE);
+                buttonLogin.setVisibility(View.GONE);
                 TextInputEditText editTextEmail = findViewById(R.id.textInputEditTextEmail);
                 TextInputEditText editTextSenha = findViewById(R.id.textInputEditTextSenha);
                 String editTextEmailValue = String.valueOf(editTextEmail.getText());
@@ -54,14 +59,15 @@ public class MainActivity extends AppCompatActivity {
                 usuarioService = new UsuarioService();
 
                 if (editTextEmailValue.isEmpty() || editTextSenhaValue.isEmpty()) {
-                    Log.d("LoginError", "Email or Password is empty");
+                    Toast.makeText(getApplicationContext(), "Preencha os campos acima", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 usuarioService.login(editTextEmailValue, editTextSenhaValue, new UsuarioLoginCallback() {
                     @Override
                     public void onUsuarioReceived(UsuarioModel usuario) {
                         runOnUiThread(() -> {
-                            Log.d("usuario.getEmail()",usuario.getEmail());
+                            progressBarLogin.setVisibility(View.GONE);
+                            buttonLogin.setVisibility(View.VISIBLE);
                             Intent ListLicitacoesIntent = new Intent(MainActivity.this, ListLicitacoesActivity.class);
                             startActivity(ListLicitacoesIntent);
                             SharedPreferences.Editor editor = sharedPref.edit();
@@ -69,12 +75,15 @@ public class MainActivity extends AppCompatActivity {
                             editor.putString("token", usuario.getToken());
                             editor.apply();
                         });
-
                     }
 
                     @Override
                     public void onError(Throwable throwable) {
-                        Log.d("Errpgfvr",throwable.toString());
+                        runOnUiThread(() -> {
+                            progressBarLogin.setVisibility(View.GONE);
+                            buttonLogin.setVisibility(View.VISIBLE);
+                            Toast.makeText(getApplicationContext(), throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
                     }
                 });
             }

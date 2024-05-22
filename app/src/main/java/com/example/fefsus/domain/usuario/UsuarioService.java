@@ -12,11 +12,9 @@ public class UsuarioService {
     public UsuarioService(){}
     public void login(String email, String senha,UsuarioLoginCallback usuarioLoginCallback){
         usuarioApi.loginApi(email, senha, new ApiResponseListener() {
-
             @Override
             public void onResponse(String responseBody) {
                 try{
-                    Log.d("responseBody",responseBody);
                     JSONObject jsonObject = new JSONObject(responseBody);
                     UsuarioModel usuarioModel = new UsuarioModel();
                     usuarioModel.setNome(jsonObject.getString("nome"));
@@ -32,7 +30,6 @@ public class UsuarioService {
 
             @Override
             public void onError(Throwable throwable) {
-                Log.d("onErrorrtwetwe",throwable.toString());
                 usuarioLoginCallback.onError(throwable);
             }
         });

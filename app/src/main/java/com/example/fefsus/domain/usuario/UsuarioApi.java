@@ -29,24 +29,17 @@ public class UsuarioApi {
         UsuarioDto credentials = new UsuarioDto(email, senha);
         String json = gson.toJson(credentials);
         RequestBody body = RequestBody.Companion.create(json, JSON);
-
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
                 .build();
         executor.execute(() -> {
             try (Response response = client.newCall(request).execute()) {
-                Log.d("status", String.valueOf(response));
                 if (response.isSuccessful() && response.body() != null) {
                     String responseBody = response.body().string();
                     apiResponseListener.onResponse(responseBody);
-                    Log.d("LoginSuccess", responseBody);
                 } else {
-                    String errorMessage = "Unsuccessful response";
-                    if (response.body() != null) {
-                        errorMessage += ": " + response.body().string(); // To handle error messages from server.
-                    }
-                    apiResponseListener.onError(new IOException(errorMessage));
+                    apiResponseListener.onError(new IOException(response.body().string()));
                 }
             } catch (IOException e) {
                 apiResponseListener.onError(e);
