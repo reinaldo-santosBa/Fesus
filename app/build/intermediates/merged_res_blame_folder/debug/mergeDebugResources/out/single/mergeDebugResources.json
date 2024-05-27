@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_details_legislacao_activity.xml.flat",
-        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
-    },
-    {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_card_licitacao.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_details_legislacao_activity.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -14,6 +14,10 @@
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_ic_launcher_background.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.fefsus.app-debug-43:/layout_edit_add_activity.xml.flat",
+        "source": "com.example.fefsus.app-main-45:/layout/edit_add_activity.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -36,6 +40,10 @@
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/xml/backup_rules.xml"
     },
     {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_fragment_editar_adicionar_legislacoes.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/fragment_editar_adicionar_legislacoes.xml"
+    },
+    {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_vector.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/vector.xml"
     },
@@ -50,6 +58,10 @@
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_save.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/save.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_edit_add_activity.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/edit_add_activity.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_roundedbg.xml.flat",
@@ -108,8 +120,8 @@
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/navigation/nav_graph.xml"
     },
     {
-        "merged": "com.example.fefsus.app-debug-43:/layout_activity_main.xml.flat",
-        "source": "com.example.fefsus.app-main-45:/layout/activity_main.xml"
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_back.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/back.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/drawable_marca_fesfsus.webp.flat",

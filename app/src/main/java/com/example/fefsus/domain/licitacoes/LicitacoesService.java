@@ -28,10 +28,10 @@ public class LicitacoesService {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         LicitacoesModel licitacoesModel = new LicitacoesModel();
-                        licitacoesModel.setDescricao(jsonObject.getString("descricao"));
-                        licitacoesModel.setDetalhe(jsonObject.getString("detalhes"));
+                        licitacoesModel.setDescricao(jsonObject.getString("titulo"));
+                        licitacoesModel.setDetalhe(jsonObject.getString("detalhe"));
                         licitacoesModel.setId(Long.valueOf(jsonObject.getString("id")));
-                        licitacoesModel.setNumero(jsonObject.getString("numero"));
+                        licitacoesModel.setNumero(jsonObject.getString("numeroLegislacao"));
                         arrayLicitacoes.add(licitacoesModel);
                     }
 
@@ -54,11 +54,10 @@ public class LicitacoesService {
                 try {
                         JSONObject jsonObject = new JSONObject(responseBody);
                         LicitacoesModel licitacoesModel = new LicitacoesModel();
-
-                        licitacoesModel.setDetalhe(jsonObject.getString("detalhes"));
-                        licitacoesModel.setDescricao(jsonObject.getString("descricao"));
-                        licitacoesModel.setId(Long.parseLong(jsonObject.getString("id")));
-                        licitacoesModel.setNumero(jsonObject.getString("numero"));
+                        licitacoesModel.setDescricao(jsonObject.getString("titulo"));
+                        licitacoesModel.setDetalhe(jsonObject.getString("detalhe"));
+                        licitacoesModel.setId(Long.valueOf(jsonObject.getString("id")));
+                        licitacoesModel.setNumero(jsonObject.getString("numeroLegislacao"));
 
                         callback.onLicitacaoReceived(licitacoesModel);
                 } catch (JSONException e) {

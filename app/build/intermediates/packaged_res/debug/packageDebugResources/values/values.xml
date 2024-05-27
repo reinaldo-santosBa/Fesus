@@ -16,12 +16,22 @@
     <string name="app_name">Fefsus</string>
     <string name="apresentacao">Reinaldo Olá mundo</string>
     <string name="backbtn">backBtn</string>
+    <string name="buttonback">ButtonBack</string>
+    <string name="buttonsave">ButtonSave</string>
+    <string name="detalhe_da_legisla_o">DETALHE DA LEGISLAÇÃO</string>
+    <string name="digite_aqui">Digite aqui...</string>
+    <string name="digite_o_numero_da_lei">Digite o Numero da Lei</string>
+    <string name="digite_o_titulo_da_lei">Digite o titulo da Lei</string>
+    <string name="editar_legisla_o">Editar legislação</string>
     <string name="editbtn">editBtn</string>
     <string name="first_fragment_label">First Fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hintUsuario">Usuário</string>
     <string name="hint_search">Digite sua pesquisa...</string>
     <string name="marcos">Marcos oi</string>
     <string name="next">Next</string>
+    <string name="nova_legisla_o">Nova Legislação</string>
+    <string name="numero_da_legisla_o">NUMERO DA LEGISLAÇÃO</string>
     <string name="preference_file_key">com.example.fefsus.PREFERENCE_FILE_KEY</string>
     <string name="previous">Previous</string>
     <string name="ricardo">Ricardo oi</string>
@@ -29,6 +39,7 @@
     <string name="search">Search</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="senha">Senha</string>
+    <string name="titulo_da_legisla_o">TItulo da Legislação</string>
     <string name="visualizar_as_legisla_es">Visualizar as legislações</string>
     <style name="Base.Theme.Fefsus" parent="Theme.Material3.DayNight.NoActionBar">
         

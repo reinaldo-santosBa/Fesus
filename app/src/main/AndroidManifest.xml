@@ -29,6 +29,9 @@
         <activity android:name=".pages.detailsLegislacao.DetailsLegislacaoActivity">
 
         </activity>
+        <activity android:name=".pages.editarAdicionarLegislacoes.EditAddActivity">
+
+        </activity>
     </application>
 
 </manifest>

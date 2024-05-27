@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-34:12
-INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-34:12
+ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [androidx.databinding:viewbinding:8.3.1] /home/reinaldo/.gradle/caches/transforms-3/9105bc74a26c71b8e7a1b2b5b2d0dade/transformed/viewbinding-8.3.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.7] /home/reinaldo/.gradle/caches/transforms-3/a47aca427727780603dca3dcd4378213/transformed/navigation-common-2.7.7/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.7] /home/reinaldo/.gradle/caches/transforms-3/7b27f12cb3a2403695f3341618fa7ff0/transformed/navigation-runtime-2.7.7/AndroidManifest.xml:17:1-22:12
@@ -73,8 +73,8 @@ ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManif
 	android:name
 		ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:5:5-32:19
-INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:5:5-32:19
+ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:5:5-35:19
+INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:5:5-35:19
 MERGED from [com.google.android.material:material:1.11.0] /home/reinaldo/.gradle/caches/transforms-3/7c4b5e8ff575437fae53dee2fef930d9/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/reinaldo/.gradle/caches/transforms-3/7c4b5e8ff575437fae53dee2fef930d9/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/reinaldo/.gradle/caches/transforms-3/0198424b8346ffe10249573ea892eada/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -143,6 +143,10 @@ activity#com.example.fefsus.pages.detailsLegislacao.DetailsLegislacaoActivity
 ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:29:9-31:20
 	android:name
 		ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:29:19-84
+activity#com.example.fefsus.pages.editarAdicionarLegislacoes.EditAddActivity
+ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:32:9-34:20
+	android:name
+		ADDED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml:32:19-83
 uses-sdk
 INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/reinaldo/AndroidStudioProjects/Fefsus/app/src/main/AndroidManifest.xml

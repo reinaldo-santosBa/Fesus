@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -19,7 +20,7 @@ import java.lang.String;
 
 public final class ListLicitacaoActivityBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
   public final FloatingActionButton btnAdd;
@@ -31,14 +32,14 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
   public final ConstraintLayout linearLayout;
 
   @NonNull
-  public final ConstraintLayout linearLayout2;
+  public final LinearLayout linearLayout2;
 
   @NonNull
   public final RecyclerView recyclerViewLicitacoes;
 
-  private ListLicitacaoActivityBinding(@NonNull ConstraintLayout rootView,
+  private ListLicitacaoActivityBinding(@NonNull LinearLayout rootView,
       @NonNull FloatingActionButton btnAdd, @NonNull EditText inputSearch,
-      @NonNull ConstraintLayout linearLayout, @NonNull ConstraintLayout linearLayout2,
+      @NonNull ConstraintLayout linearLayout, @NonNull LinearLayout linearLayout2,
       @NonNull RecyclerView recyclerViewLicitacoes) {
     this.rootView = rootView;
     this.btnAdd = btnAdd;
@@ -50,7 +51,7 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -93,7 +94,7 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      ConstraintLayout linearLayout2 = (ConstraintLayout) rootView;
+      LinearLayout linearLayout2 = (LinearLayout) rootView;
 
       id = R.id.recyclerViewLicitacoes;
       RecyclerView recyclerViewLicitacoes = ViewBindings.findChildViewById(rootView, id);
@@ -101,7 +102,7 @@ public final class ListLicitacaoActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ListLicitacaoActivityBinding((ConstraintLayout) rootView, btnAdd, inputSearch,
+      return new ListLicitacaoActivityBinding((LinearLayout) rootView, btnAdd, inputSearch,
           linearLayout, linearLayout2, recyclerViewLicitacoes);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -53,22 +55,57 @@ public class LicitacoesAdapter extends RecyclerView.Adapter<LicitacoesAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolderLicitacoes holder, int position) {
         LicitacoesModel licitacoesModel = licitacoesListFiltradas.get(position);
-        holder.descricao.setText(licitacoesModel.getDescricao());
-        holder.numero.setText(licitacoesModel.getNumero());
-        if (licitacoesModel.getDetalhe().length() > 100) {
-            String textoCompleto = licitacoesModel.getDetalhe().substring(0,100) + ". Clique para ver mais...";
+        if(!licitacoesModel.getNumero().isEmpty()){
+            String numeroLegislacao =licitacoesModel.getNumero();
+            String textoCompleto = "Número da legisção: " + numeroLegislacao;
+
             SpannableStringBuilder builder = new SpannableStringBuilder(textoCompleto);
 
-            SpannableString clickSpan = new SpannableString("Clique para ver mais...");
-            clickSpan.setSpan(new UnderlineSpan(), 0, clickSpan.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-            clickSpan.setSpan(new ForegroundColorSpan(Color.BLUE), 0, clickSpan.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            int detalheStart = 0;
+            int detalheEnd = "Número da legisção:".length();
+            builder.setSpan(new StyleSpan(Typeface.BOLD), detalheStart, detalheEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            holder.numero.setText(builder);
+        }
 
-            builder.replace(builder.length() - "Clique para ver mais...".length(), builder.length(), clickSpan);
+        if(licitacoesModel.getDescricao().length() > 30){
+            String descricao =licitacoesModel.getDescricao().substring(0, 30);
+            String textoCompleto = "Descrição: " + descricao + "...";
+
+            SpannableStringBuilder builder = new SpannableStringBuilder(textoCompleto);
+
+            int detalheStart = 0;
+            int detalheEnd = "Descrição:".length();
+            builder.setSpan(new StyleSpan(Typeface.BOLD), detalheStart, detalheEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            holder.descricao.setText(builder);
+        }else {
+            holder.descricao.setText(licitacoesModel.getDescricao());
+        }
+        if (licitacoesModel.getDetalhe().length() > 110) {
+            String detalhe = licitacoesModel.getDetalhe().substring(0, 110);
+            String textoCompleto = "Detalhe: " + detalhe + " Clique para ver mais...";
+
+            SpannableStringBuilder builder = new SpannableStringBuilder(textoCompleto);
+
+            int detalheStart = 0;
+            int detalheEnd = "Detalhe:".length();
+            builder.setSpan(new StyleSpan(Typeface.BOLD), detalheStart, detalheEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+            int cliqueStart = textoCompleto.lastIndexOf("Clique para ver mais...");
+            int cliqueEnd = cliqueStart + "Clique para ver mais...".length();
+            builder.setSpan(new UnderlineSpan(), cliqueStart, cliqueEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            builder.setSpan(new ForegroundColorSpan(Color.BLUE), cliqueStart, cliqueEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
             holder.detalhe.setText(builder);
         } else {
-            // Exibir o detalhe completo
-            holder.detalhe.setText(licitacoesModel.getDetalhe());
+            String detalhe = licitacoesModel.getDetalhe();
+            String textoCompleto = "Detalhe: " + detalhe + " Clique para ver mais...";
+
+            SpannableStringBuilder builder = new SpannableStringBuilder(textoCompleto);
+
+            int detalheStart = 0;
+            int detalheEnd = "Detalhe:".length();
+            builder.setSpan(new StyleSpan(Typeface.BOLD), detalheStart, detalheEnd, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+            holder.detalhe.setText(builder);
         }
 
         holder.cardViewLicitacao.setOnClickListener(new View.OnClickListener() {

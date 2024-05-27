@@ -3,7 +3,14 @@ package com.example.fefsus.pages.detailsLegislacao;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -16,6 +23,8 @@ import com.example.fefsus.R;
 import com.example.fefsus.domain.licitacoes.LicitacaoCallback;
 import com.example.fefsus.domain.licitacoes.LicitacoesModel;
 import com.example.fefsus.domain.licitacoes.LicitacoesService;
+import com.example.fefsus.pages.editarAdicionarLegislacoes.EditAddActivity;
+import com.example.fefsus.pages.listLicitacoes.ListLicitacoesActivity;
 
 public class DetailsLegislacaoActivity  extends AppCompatActivity {
     private LicitacoesService licitacoesService = new LicitacoesService();
@@ -37,8 +46,29 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
         ViewGroup parent = (ViewGroup) imageButtonEdit.getParent();
         if(!logged){
             parent.removeView(imageButtonEdit);
+        }else {
+            imageButtonEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(DetailsLegislacaoActivity.this, EditAddActivity.class);
+                    intent.putExtra("id",intent.getLongExtra("id",0));
+                    startActivity(intent);
+                }
+            });
         }
         if(intent != null){
+            if(!logged){
+                parent.removeView(imageButtonEdit);
+            }else {
+                imageButtonEdit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(DetailsLegislacaoActivity.this, EditAddActivity.class);
+                        intent.putExtra("id",intent.getLongExtra("id",0));
+                        startActivity(intent);
+                    }
+                });
+            }
             licitacoesService.getId(intent.getLongExtra("id",0),
                     new LicitacaoCallback(){
                         @Override
@@ -47,12 +77,14 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
                                 @Override
                                 public void run() {
                                     textDetalhe = findViewById(R.id.textDetalhe);
-                                    textDetalhe.setText(licitacoes.getDetalhe());
+                                    String detalheCompleto = "<b>Detalhe: </b>" + licitacoes.getDetalhe();
+                                    textDetalhe.setText(Html.fromHtml(detalheCompleto, Html.FROM_HTML_MODE_LEGACY));
                                     textNumero = findViewById(R.id.textNumero);
-                                    textNumero.setText(licitacoes.getNumero());
+                                    String numeroCompleto = "<b>Número da legislação: </b>" + licitacoes.getNumero();
+                                    textNumero.setText(Html.fromHtml(numeroCompleto, Html.FROM_HTML_MODE_LEGACY));
                                     textDescricao = findViewById(R.id.textDescricao);
-                                    textDescricao.setText(licitacoes.getDescricao());
-
+                                    String descricaoCompleto = "<b>Descrição: </b>" + licitacoes.getDescricao();
+                                    textDescricao.setText(Html.fromHtml(descricaoCompleto, Html.FROM_HTML_MODE_LEGACY));
                                 }
                             });
                         }
@@ -71,11 +103,5 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
             }
         });
 
-        imageButtonEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
-            }
-        });
     }
 }

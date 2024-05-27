@@ -44,6 +44,8 @@
         </activity>
         <activity android:name="com.example.fefsus.pages.detailsLegislacao.DetailsLegislacaoActivity" >
         </activity>
+        <activity android:name="com.example.fefsus.pages.editarAdicionarLegislacoes.EditAddActivity" >
+        </activity>
 
         <provider
             android:name="androidx.startup.InitializationProvider"
