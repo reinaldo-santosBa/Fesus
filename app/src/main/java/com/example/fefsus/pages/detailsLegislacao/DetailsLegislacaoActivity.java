@@ -11,6 +11,7 @@ import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.UnderlineSpan;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
@@ -42,21 +43,10 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
         );
         boolean logged = sharedPref.getBoolean("logged",false);
         ImageButton imageButtonEdit = findViewById(R.id.imageButtonEdit);
-
         ViewGroup parent = (ViewGroup) imageButtonEdit.getParent();
-        if(!logged){
-            parent.removeView(imageButtonEdit);
-        }else {
-            imageButtonEdit.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(DetailsLegislacaoActivity.this, EditAddActivity.class);
-                    intent.putExtra("id",intent.getLongExtra("id",0));
-                    startActivity(intent);
-                }
-            });
-        }
+
         if(intent != null){
+            Long id =   intent.getLongExtra("id",0);
             if(!logged){
                 parent.removeView(imageButtonEdit);
             }else {
@@ -64,12 +54,12 @@ public class DetailsLegislacaoActivity  extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(DetailsLegislacaoActivity.this, EditAddActivity.class);
-                        intent.putExtra("id",intent.getLongExtra("id",0));
+                        intent.putExtra("id",id);
                         startActivity(intent);
                     }
                 });
             }
-            licitacoesService.getId(intent.getLongExtra("id",0),
+            licitacoesService.getId(id,
                     new LicitacaoCallback(){
                         @Override
                         public void onLicitacaoReceived(LicitacoesModel licitacoes) {

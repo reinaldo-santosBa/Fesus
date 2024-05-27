@@ -71,4 +71,36 @@ public class LicitacoesService {
             }
         });
     }
+    public void create(LicitacoesModel licitacoesModel,String token, LicitacoesEditAdd licitacoesEditAdd){
+
+        licitacoesApi.create(licitacoesModel,token, new ApiResponseListener() {
+            @Override
+            public void onResponse(String responseBody) {
+                Log.d("Teste 1","Parou aqui 1");
+                licitacoesEditAdd.onLicitacaoEditAddReceived("Criado com sucesso");
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                Log.d("Teste 2","Parou aqui 2");
+                licitacoesEditAdd.onError(throwable);
+            }
+        });
+    }
+    public void update(LicitacoesModel licitacoesModel,String token, LicitacoesEditAdd licitacoesEditAdd){
+
+        licitacoesApi.update(licitacoesModel,token, new ApiResponseListener() {
+            @Override
+            public void onResponse(String responseBody) {
+                Log.d("Teste 1","Parou aqui 1");
+                licitacoesEditAdd.onLicitacaoEditAddReceived("Editado com sucesso");
+            }
+
+            @Override
+            public void onError(Throwable throwable) {
+                Log.d("Teste 2","Parou aqui 2");
+                licitacoesEditAdd.onError(throwable);
+            }
+        });
+    }
 }
