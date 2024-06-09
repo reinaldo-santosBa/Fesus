@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_card_licitacao.xml.flat",
-        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
-    },
-    {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_details_legislacao_activity.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/details_legislacao_activity.xml"
+    },
+    {
+        "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_card_licitacao.xml.flat",
+        "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/layout/card_licitacao.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
@@ -16,8 +16,8 @@
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.fefsus.app-debug-43:/layout_edit_add_activity.xml.flat",
-        "source": "com.example.fefsus.app-main-45:/layout/edit_add_activity.xml"
+        "merged": "com.example.fefsus.app-debug-43:/drawable_custom_shape_dialog.xml.flat",
+        "source": "com.example.fefsus.app-main-45:/drawable/custom_shape_dialog.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/mipmap-anydpi_ic_launcher_round.xml.flat",
         "source": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-main-45:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.fefsus.app-debug-43:/layout_dialog_activity.xml.flat",
+        "source": "com.example.fefsus.app-main-45:/layout/dialog_activity.xml"
     },
     {
         "merged": "/home/reinaldo/.gradle/daemon/8.4/com.example.fefsus.app-debug-43:/layout_activity_main.xml.flat",

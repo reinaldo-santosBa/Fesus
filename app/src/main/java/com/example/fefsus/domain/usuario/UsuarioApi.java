@@ -2,6 +2,7 @@ package com.example.fefsus.domain.usuario;
 
 import android.util.Log;
 
+import com.example.fefsus.config.ApiLink;
 import com.example.fefsus.utils.ApiResponseListener;
 import com.google.gson.Gson;
 
@@ -23,9 +24,10 @@ public class UsuarioApi {
     private final Executor executor = Executors.newSingleThreadExecutor();
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private final Gson gson = new Gson();
+    private final ApiLink apiLink = new ApiLink();
 
     public void loginApi(String email, String senha, ApiResponseListener apiResponseListener){
-        String url = "http://192.168.100.50:8080/usuario/login";
+        String url = apiLink.getLink() + "usuario/login";
         UsuarioDto credentials = new UsuarioDto(email, senha);
         String json = gson.toJson(credentials);
         RequestBody body = RequestBody.Companion.create(json, JSON);

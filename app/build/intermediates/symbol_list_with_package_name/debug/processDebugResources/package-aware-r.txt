@@ -3031,6 +3031,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable custom_shape_dialog
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -3624,7 +3625,9 @@ id textView2
 id textView3
 id textViewDetailsDescricao
 id textViewDetalhes
+id textViewMsg
 id textViewNumero
+id textViewOk
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3811,6 +3814,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout details_legislacao_activity
+layout dialog_activity
 layout edit_add_activity
 layout list_licitacao_activity
 layout m3_alert_dialog

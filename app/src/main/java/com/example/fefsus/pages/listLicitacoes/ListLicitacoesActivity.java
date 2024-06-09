@@ -14,42 +14,46 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fefsus.R;
-import com.example.fefsus.domain.licitacoes.LicitacoesAdapter;
-import com.example.fefsus.domain.licitacoes.LicitacoesCallback;
-import com.example.fefsus.domain.licitacoes.LicitacoesModel;
-import com.example.fefsus.domain.licitacoes.LicitacoesService;
+import com.example.fefsus.domain.legislacao.LegislacaoAdapter;
+import com.example.fefsus.domain.legislacao.LegislacoesCallback;
+import com.example.fefsus.domain.legislacao.LegislacaoModel;
+import com.example.fefsus.domain.legislacao.LegislacaoService;
 import com.example.fefsus.pages.editarAdicionarLegislacoes.EditAddActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class ListLicitacoesActivity extends AppCompatActivity {
-    private LicitacoesService licitacoesService = new LicitacoesService();
+    private LegislacaoService licitacoesService = new LegislacaoService();
     private EditText textSearch;
-    private LicitacoesAdapter licitacoesAdapter;
+    private LegislacaoAdapter licitacoesAdapter;
     private Handler handler = new Handler(Looper.getMainLooper());
+    private ActivityResultLauncher<Intent> addEditLauncher;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_licitacao_activity);
-
-        RecyclerView recyclerViewLicitacoes = findViewById(R.id.recyclerViewLicitacoes);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerViewLicitacoes.setLayoutManager(layoutManager);
-        recyclerViewLicitacoes.setHasFixedSize(true);
-
+        addEditLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    loadItens();
+                }
+        );
         SharedPreferences sharedPref = getSharedPreferences(
                 getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         boolean logged = sharedPref.getBoolean("logged", false);
         FloatingActionButton floatingActionButton = findViewById(R.id.btnAdd);
 
         ViewGroup parent = (ViewGroup) floatingActionButton.getParent();
+
         if (!logged) {
             parent.removeView(floatingActionButton);
         } else {
@@ -57,36 +61,44 @@ public class ListLicitacoesActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(ListLicitacoesActivity.this, EditAddActivity.class);
-                    startActivity(intent);
+                    addEditLauncher.launch(intent);
                 }
             });
         }
+        loadItens();
 
-        licitacoesService.get(new LicitacoesCallback() {
+        textSearch = findViewById(R.id.inputSearch);
+        textSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onLicitacoesReceived(ArrayList<LicitacoesModel> licitacoes) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                if (licitacoesAdapter != null) {
+                    licitacoesAdapter.filtrar(s.toString());
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
+    }
+    public void loadItens(){
+        licitacoesService.get(new LegislacoesCallback() {
+            @Override
+            public void onLicitacoesReceived(ArrayList<LegislacaoModel> licitacoes) {
                 handler.post(() -> {
+                    RecyclerView recyclerViewLicitacoes = findViewById(R.id.recyclerViewLicitacoes);
+                    RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListLicitacoesActivity.this);
+                    recyclerViewLicitacoes.setLayoutManager(layoutManager);
+                    recyclerViewLicitacoes.setHasFixedSize(true);
                     if (!licitacoes.isEmpty()) {
-                        licitacoesAdapter = new LicitacoesAdapter(licitacoes, ListLicitacoesActivity.this);
+                        licitacoesAdapter = new LegislacaoAdapter(licitacoes, ListLicitacoesActivity.this,addEditLauncher);
                         recyclerViewLicitacoes.setAdapter(licitacoesAdapter);
                     } else {
-                        Log.e("List", "A lista de licitações está vazia.");
+                        Toast.makeText(getApplicationContext(), "Sem dados para exibir", Toast.LENGTH_SHORT).show();
                     }
-                    textSearch = findViewById(R.id.inputSearch);
-                    textSearch.addTextChangedListener(new TextWatcher() {
-                        @Override
-                        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-                        @Override
-                        public void onTextChanged(CharSequence s, int start, int before, int count) {
-                            if (licitacoesAdapter != null) {
-                                licitacoesAdapter.filtrar(s.toString());
-                            }
-                        }
-
-                        @Override
-                        public void afterTextChanged(Editable s) {}
-                    });
                 });
             }
 
@@ -98,4 +110,5 @@ public class ListLicitacoesActivity extends AppCompatActivity {
             }
         });
     }
+
 }

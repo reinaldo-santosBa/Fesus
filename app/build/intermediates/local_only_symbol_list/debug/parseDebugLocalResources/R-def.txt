@@ -11,6 +11,7 @@ dimen padding_main
 drawable add
 drawable added
 drawable back
+drawable custom_shape_dialog
 drawable edit
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -59,7 +60,9 @@ id textView2
 id textView3
 id textViewDetailsDescricao
 id textViewDetalhes
+id textViewMsg
 id textViewNumero
+id textViewOk
 id titlePage
 id view2
 id view3
@@ -67,6 +70,7 @@ layout activity_main
 layout app_bar
 layout card_licitacao
 layout details_legislacao_activity
+layout dialog_activity
 layout edit_add_activity
 layout list_licitacao_activity
 mipmap ic_launcher
